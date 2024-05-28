@@ -1,0 +1,67 @@
+/* 
+// Metacrafters - Beginning Javascript
+//
+// This is a javascript playground for testing your javascript code!
+// When you are ready to test, simply right click and select "Run Code"
+// to see the result print below. If you have more then one snippet of code,
+// you can highlight the code you want to test, and then right click and select "Run Code"
+*/
+
+// Enter your code below this line
+
+// Code example
+
+
+
+/*
+Assessment Requirements
+1. Create a variable that can hold a number of NFT's. What type of variable might this be?
+2. Create an object inside your mintNFT function that will hold the metadata for your NFTs. 
+   The metadata values will be passed to the function as parameters. When the NFT is ready, 
+   you will store it in the variable you created in step 1
+3. Your listNFTs() function will print all of your NFTs metadata to the console (i.e. console.log("Name: " + someNFT.name))
+4. For good measure, getTotalSupply() should return the number of NFT's you have created
+*/
+
+// create a variable to hold your NFT's
+
+let stu_rec=[];
+
+// this function will take in some values as parameters, create an
+// NFT object using the parameters passed to it for its metadata, 
+// and store it in the variable above.
+function create (_grade,_section,_course,_college) {
+    const set = {
+        "personalId" : _grade ,
+        "section" : _section ,
+        "course" : _course ,
+        "college" : _college 
+    }
+
+    stu_rec.push(set);
+    console.log("Awarded: " + _grade);
+}
+
+// create a "loop" that will go through an "array" of NFT's
+// and print their metadata with console.log()
+function classlist () {
+for(let i = 0 ; i<stu_rec.length;i++){
+    console.log("\nID:  \t\t\t\t" + (i + 1));
+    console.log("\nsection:\t\t\t " + stu_rec[i].section);
+    console.log("course: \t\t\t"  + stu_rec[i].course);
+    console.log("college: \t\t\t" + stu_rec[i].college);
+}
+}
+
+// print the total number of NFTs we have minted to the console
+function Student() {
+    console.log("\n" + stu_rec.length);
+}
+
+// call your functions below this line
+create("B","212","CSE","CU");
+create("A","104","BA","CU");
+create("A","601","Law","CU");
+create("C","703","Psychology","CU");
+classlist();
+Student();
